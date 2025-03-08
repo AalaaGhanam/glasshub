@@ -23,6 +23,7 @@ Clone the repository and install project dependencies by running the below comma
 ```sh
 git clone https://github.com/AalaaGhanam/glasshub
 cd glasshub-backend
+cp .dev.env file to .env.
 ```
 
 - Install node dependencies
@@ -45,7 +46,7 @@ docker-compose down
 
 Check swagger for detailed breakdown of the API endpoints:
 
-http://localhost:3000/api/docs/#/
+http://localhost:8080/api/docs/#/
 
 
 ### Service Structure and Endpoints

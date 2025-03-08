@@ -1,5 +1,6 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { IsString, IsDateString, IsNotEmpty } from 'class-validator';
+import { IsString, IsDateString, IsNotEmpty, IsBase64 } from 'class-validator';
+import { IsBase64Image } from '../is-base64-image.decorator';
 
 export class CreateCertificateDto {
   @IsString()
@@ -10,7 +11,7 @@ export class CreateCertificateDto {
   })
   companyName: string;
 
-  @IsString()
+  @IsBase64Image()
   @IsNotEmpty()
   @ApiProperty({
     example: '/logo.png',

@@ -8,7 +8,7 @@ export class Certificate {
   @Column()
   companyName: string;
 
-  @Column()
+  @Column('text')
   logo: string;
 
   @Column('text')
