@@ -7,6 +7,6 @@ export const formatDate = (dateString: string): string => {
 };
 
 export const isValidBase64Image = (base64: string): boolean => {
-  const base64Regex = /^data:image\/(png|jpeg|jpg|gif);base64,/;
+  const base64Regex = /^data:image\/(png|jpeg|jpg|gif|webp);base64,/;
   return base64Regex.test(base64);
 };

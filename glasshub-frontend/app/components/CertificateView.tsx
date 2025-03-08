@@ -56,6 +56,7 @@ export default function CertificateView({
   if (!certificateData) {
     return <div>No certificate data found.</div>;
   }
+  const logo = `${process.env.NEXT_PUBLIC_API_URL}${certificateData.logo}`;
 
   return (
     <div className={styles.certificateContainer}>
@@ -63,11 +64,7 @@ export default function CertificateView({
         <div className={styles.header}>
           <div>
             {certificateData.logo && (
-              <img
-                src={certificateData.logo}
-                alt="Logo"
-                className={styles.logo}
-              />
+              <img src={logo} alt="Logo" className={styles.logo} />
             )}
           </div>
           <div className={styles.dateIdSection}>
